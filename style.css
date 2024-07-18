@@ -57,6 +57,11 @@ p {
     --light-green: #8ffcbc;
     --yellow: #fff200;
     --white: #fff;
+    --dark-blue: #060687;
+    --light-blue: #5595f0;
+    --lighter-blue: #76cff5;
+    --grey: #93918e;
+    --lighter-grey: #c4bcbc;
 }
 
 
@@ -97,4 +102,36 @@ p {
 
 .btn-2:hover {
     transform: scale(1.15);
+}
+
+.btn-3 {
+    color: var(--white);
+    background-color: var(--grey);
+    font-weight: bolder;
+    padding: 10px 20px;
+    border: 5px inset rgb(171, 173, 174);
+    border-radius: 35px;
+    box-shadow: 0 7px hsl(232, 9%, 36%);
+}
+
+@keyframes jumpEffect {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+       transform: translateY(0);
+    }
+}
+
+.btn-3:hover {
+   background-color: var(--lighter-grey);
+   animation: jumpEffect 0.9s ease-in-out;
+}
+
+.btn-3:active {
+    transform: translateY(3px);
+    box-shadow: 0px 6px #888a8e;
 }
