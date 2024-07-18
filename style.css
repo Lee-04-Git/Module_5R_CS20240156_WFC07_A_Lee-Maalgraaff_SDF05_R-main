@@ -55,11 +55,13 @@ p {
 :root {
     --green: #27ae60;
     --light-green: #8ffcbc;
+    --yellow: #fff200;
+    --white: #fff;
 }
 
 
 .btn-1 {
-    color: #fff;
+    color: var(--white);
     background-color: var(--green);
     border: none;
     border-radius: 5px;
@@ -81,4 +83,18 @@ p {
 .btn-1:hover {
     background-color: var(--light-green);
     animation: pulse 1s infinite;
+}
+
+.btn-2 {
+    color: var(--white);
+    background-color: var(--yellow);
+    border: 2px outset;
+    border-radius: 20px;
+    font-weight: bolder;
+    font-style: oblique;
+    transition: transform 0.3;
+}
+
+.btn-2:hover {
+    transform: scale(1.10);
 }
