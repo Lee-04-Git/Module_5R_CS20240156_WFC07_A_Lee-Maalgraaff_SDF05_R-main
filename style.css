@@ -52,3 +52,33 @@ p {
 }
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
+:root {
+    --green: #27ae60;
+    --light-green: #8ffcbc;
+}
+
+
+.btn-1 {
+    color: #fff;
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-1:hover {
+    background-color: var(--light-green);
+    animation: pulse 1s infinite;
+}
