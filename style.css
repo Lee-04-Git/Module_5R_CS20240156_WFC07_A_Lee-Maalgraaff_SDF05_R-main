@@ -75,13 +75,13 @@ p {
 
 @keyframes pulse {
     0% {
-        transform: scale(1);
+        transform: scale(1); /* element is at its original size(100%) */
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.1); /* grows to 110% of its original size */
     }
     100% {
-        transform: scale(1);
+        transform: scale(1);  /* back to its original size(100%) */
     }
 }
 
@@ -101,7 +101,7 @@ p {
 }
 
 .btn-2:hover {
-    transform: scale(1.15);
+    transform: scale(1.15); /* makes the element 15% bigger */
 }
 
 .btn-3 {
@@ -116,22 +116,22 @@ p {
 
 @keyframes jumpEffect {
     0% {
-        transform: translateY(0)
+        transform: translateY(0) /* Element is in its original position at start of animation */
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-8px); /* Halfway through the animation, the element moves up */
     }
     100% {
-       transform: translateY(0);
+       transform: translateY(0);  /* Returns to its original position */
     }
 }
 
 .btn-3:hover {
    background-color: var(--lighter-grey);
-   animation: jumpEffect 0.9s ease-in-out;
+   animation: jumpEffect 1s ease-in-out; /* element will slowly speed up in the middle */
 }
 
-.btn-3:active {
-    transform: translateY(3px);
+.btn-3:active {   /* when the mouse is pressed down on an element then do the following,  */
+    transform: translateY(3px);                                    /* if not, do nothing. */
     box-shadow: 0px 6px #888a8e;
 }
